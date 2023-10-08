@@ -16,3 +16,5 @@
     - Movie Suggestions
       - Movie Lists * N
 - Netflix GPT Page
+  - Search Bar
+  - Movie Suggestions
