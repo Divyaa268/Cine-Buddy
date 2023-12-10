@@ -1,12 +1,13 @@
 import React from 'react'
 import img1 from '../cineBuddyLogo.png'
+import img2 from '../cblogo11.png'
 
 const Header = () => {
   return (
-    <div className="absolute bg-gradient-to-b from-rose-600">
+    <div className="absolute px-6 py-2 bg-gradient-to-b from-black">
       
-      <img className="w-48"
-      src={img1} alt="logo" />
+      <img className="w-52"
+      src={img2} alt="logo" />
     </div>
   )
 }
