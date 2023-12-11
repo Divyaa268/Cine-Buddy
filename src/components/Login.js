@@ -6,8 +6,11 @@ const Login = () =>
 {
     const [isSignInForm, setIsSignInForm] = useState(true);
 
+    const [errorMessage, setErrorMessage] = useState(null);
+
     const email = useRef(null);
     const password = useRef(null);
+    const name = useRef(null);
 
     const toggleSignIn = () => {
         setIsSignInForm(!isSignInForm);
@@ -18,11 +21,13 @@ const Login = () =>
     const handleButtonClick = () => {
         // validate the data of the form
 
-        console.log(email.current.value);
-        console.log(password.current.value);
+        // console.log(email.current.value);
+        // console.log(password.current.value);
 
-        const message = validate(email.current.value, password.current.value);
-        console.log(message);
+        const message = validate(email.current.value, password.current.value, name.current.value);
+        // console.log(message);
+
+        setErrorMessage(message);
 
     }
 
@@ -42,7 +47,9 @@ const Login = () =>
         <h1 className="font-bold text-3xl my-2 p-3">{isSignInForm ? "Sign In": "Sign Up" }</h1>
 
         {!isSignInForm && (
-        <input type="text" placeholder="Name" className="p-4 my-4 w-full bg-slate-700 rounded-lg" />
+        <input
+        ref = {name}
+        type="text" placeholder="Name" className="p-4 my-4 w-full bg-slate-700 rounded-lg" />
         )}
 
         <input 
@@ -52,6 +59,10 @@ const Login = () =>
         <input
         ref = {password}
          type="password" placeholder="Password" className="p-4 my-4 w-full bg-slate-700 rounded-lg" />
+
+        
+        <p className="text-red-500 font-semibold py-3 ">{errorMessage}</p>
+
 
         <button className="p-4 my-6 bg-rose-700 rounded-lg font-semibold w-full hover:bg-rose-500"
             onClick={handleButtonClick}>
