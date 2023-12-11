@@ -21,6 +21,7 @@ const Login = () =>
 
       <form className="w-3/12 absolute p-16 bg-black bg-opacity-60 my-36 mx-auto right-0 left-0 text-white rounded-lg">
 
+        {/* Sign In form */}
         <h1 className="font-bold text-3xl my-2 p-3">{isSignInForm ? "Sign In": "Sign Up" }</h1>
 
         {!isSignInForm && (
