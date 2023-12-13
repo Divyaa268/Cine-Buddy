@@ -1,7 +1,9 @@
 import { useState, useRef } from "react"
 import Header from "./Header"
 import validate from "../utils/validate";
-
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../utils/firebase";
+ 
 const Login = () =>
 {
     const [isSignInForm, setIsSignInForm] = useState(true);
@@ -24,10 +26,54 @@ const Login = () =>
         // console.log(email.current.value);
         // console.log(password.current.value);
 
-        const message = validate(email.current.value, password.current.value, name.current.value);
+        const emailValue = email.current ? email.current.value : null;
+        const passwordValue = password.current ? password.current.value : null;
+        const nameValue = name.current ? name.current.value : null;
+
+        const message = validate(emailValue, passwordValue, nameValue);
+        // const message = validate(email.current.value, password.current.value, name.current.value);
         // console.log(message);
 
         setErrorMessage(message);
+
+        if(message) return;
+
+        // sign in/up successfull so we can create a user
+
+        if(!isSignInForm)
+        {
+            // sign up form logic
+            createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
+                .then((userCredential) => {
+                // Signed up 
+                const user = userCredential.user;
+                console.log(user);
+             })
+            .catch((error) => {
+                 const errorCode = error.code;
+                 const errorMessage = error.message;
+                 setErrorMessage(errorCode + "-" + errorMessage);
+             });
+
+        }
+        else
+        {
+            // sign in form logic
+            signInWithEmailAndPassword(auth, email.current.value, password.current.value)
+                .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                console.log(user);
+                console.log("sign in successful!")
+             })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            setErrorMessage(errorCode + "-" + errorMessage);
+         });
+
+        }
+
 
     }
 
