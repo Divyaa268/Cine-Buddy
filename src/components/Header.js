@@ -1,9 +1,33 @@
 import React from 'react'
 // import img1 from '../cineBuddyLogo.png'
 import img2 from '../cblogo11.png'
-import img3 from '../popcornFace.png'
+import img3 from '../popcornFace.png';
+import { signOut } from "firebase/auth";
+import { auth } from '../utils/firebase';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Header = () => {
+
+  const navigate = useNavigate();
+
+  // const dispatch = useDispatch();
+
+  const user = useSelector(store => store.user)
+
+  const handleSignOut = () => {
+
+    signOut(auth).then(() => {
+     
+      // Sign-out successful
+      navigate("/");
+    })
+    .catch((error) => {
+      // An error happened.
+      navigate("/error")
+    }
+    );
+  }
   return (
     <div className="absolute px-6 py-2 w-screen bg-gradient-to-b from-black z-10 flex justify-between">
       
@@ -18,7 +42,7 @@ const Header = () => {
           alt='User Logo'
           />
 
-      <button className='bg-red-700 rounded-lg text-white w-20 h-20 font-semibold'>Sign Out</button>
+      <button onClick={handleSignOut} className='bg-red-700 rounded-lg text-white w-20 h-20 font-semibold'>Sign Out</button>
 
       </div>
 
