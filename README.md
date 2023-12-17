@@ -16,6 +16,8 @@
 - Implemented Sign Out
 - Update User Profile
 - Fetch movies from TMDB movies
+- Unsubscribed to the onAuthStateChanged callback
+
 
 
 # Features 
