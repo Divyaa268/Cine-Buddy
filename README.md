@@ -17,7 +17,9 @@
 - Update User Profile
 - Fetch movies from TMDB movies
 - Unsubscribed to the onAuthStateChanged callback
-
+- Put hardcoded strinf values in Constants file
+- Registered for TMDB API and create an app. After that get an Access token
+- Get API Details from TMDB Documentation (Now Playing Movies API) 
 
 
 # Features 
