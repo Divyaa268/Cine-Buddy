@@ -18,7 +18,7 @@ const PrimaryVideoContainer = () => {
   return (
     <div>
 
-        <TrailerVideoBackground />
+        <TrailerVideoBackground movieId = { id } />
         <TrailerTitle title = { original_title } overview = { overview } />
       
     </div>
