@@ -1,6 +1,8 @@
 import React from 'react'
 
-const TrailerVideoBackground = () => {
+const TrailerVideoBackground = ({ id }) => {
+
+    
   return (
     <div>
       
