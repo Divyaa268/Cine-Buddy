@@ -28,6 +28,7 @@
 - Update Redux Store with trailer video data
 - Embedded the Youtube video and made it autoplay
 - Styled the Primary Container
+- Build Secondary Component
 
 
 # Features 
