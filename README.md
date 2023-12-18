@@ -29,6 +29,11 @@
 - Embedded the Youtube video and made it autoplay
 - Styled the Primary Container
 - Build Secondary Component
+- Built Movie List Component
+- Built Movie Card Component
+- Used TMDB Image CDN URL
+- Added styling with Tailwind CSS For Browse page
+- Created usePopularMovies Custom Hook
 
 
 # Features 
