@@ -74,7 +74,7 @@ const Header = () => {
           alt='User Logo'
           />
 
-      <button onClick={handleSignOut} className='bg-red-700 rounded-lg text-white w-20 h-20 font-semibold'>Sign Out</button>
+      <button onClick={handleSignOut} className='bg-red-700 rounded-lg text-white w-20 h-20 font-semibold hover:bg-opacity-75'>Sign Out</button>
 
       </div>
     )}

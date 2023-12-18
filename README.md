@@ -20,6 +20,14 @@
 - Put hardcoded strinf values in Constants file
 - Registered for TMDB API and create an app. After that get an Access token
 - Get API Details from TMDB Documentation (Now Playing Movies API) 
+- Custom hook for Now playing movies
+- Create Movie Slice
+- Updated Redux Store with movies data
+- Designed the Containers
+- Fetched data for Trailer Video using Videos API
+- Update Redux Store with trailer video data
+- Embedded the Youtube video and made it autoplay
+- Styled the Primary Container
 
 
 # Features 
