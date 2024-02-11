@@ -1,6 +1,7 @@
 # Cine Buddy : A Personalized Movie Recommendation Platform📽️🎬🎞️
 In an era dominated by digital streaming services, the demand for personalized and immersive content experiences has become more pronounced than ever. CineBuddy emerges as a groundbreaking project, meticulously crafted to address this demand by offering a sophisticatedand highly personalized movie recommendation platform. This innovative web application is designed to act as a virtual cinematic companion, guiding users through a tailored journey of discovery within the vast landscape of movies and shows. It's like having a knowledgeable movie buddy who knows your taste inside out, guiding you to hidden cinematic gems and deepening your understanding of your favorite titles.
 
+# Live App : https://tangerine-cannoli-9438ab.netlify.app/
 
 # Features 🎥 :
 CineBuddy is a feature-rich web application that combines advanced technologies to offer users a personalized and immersive movie recommendation experience. The following section details
